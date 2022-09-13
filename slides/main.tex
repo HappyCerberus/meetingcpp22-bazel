@@ -1,0 +1,50 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{fontawesome}
+
+\hypersetup{
+    colorlinks,
+    linkcolor=red,
+    pdftitle={Dark Corner of STL},
+    pdfpagemode=FullScreen,
+    }
+
+\setmonofont{JetBrainsMono}[
+    Path=./static/fonts/jetbrains/,
+    Scale=0.85,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic
+    ]
+    
+\setsansfont{Asap}[
+    Path=./static/fonts/asap/,
+    Scale=0.9,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic
+    ]
+    
+\usepackage[newfloat=true]{minted}
+\usemintedstyle{xcode}
+\beamertemplatenavigationsymbolsempty
+
+\setbeamertemplate{footline}{\begin{center}\quad\insertframenumber\strut\quad\end{center}}
+\setbeamerfont{footline}{size=\large}
+
+%\setbeameroption{hide notes} % Only slides
+%\setbeameroption{show only notes} % Only notes
+%\setbeameroption{show notes on second screen=left}
+
+\title{Living comfortably at HEAD with Bazel}
+\author{Šimon Tóth}
+
+\begin{document}
+
+\end{document}
