@@ -1,9 +1,19 @@
 # [1] Hello World!
-# Basic compiler settings
 build --client_env=CC=clang-16
 build --cxxopt="-std=c++20" --cxxopt="-pedantic" --cxxopt="-Wall" --cxxopt="-Wextra" --cxxopt="-Werror"
 
 # [2] Structured Hello World!
-# Clang specific "private headers" feature
 build --features=layering_check
 build --experimental_cc_implementation_deps
+
+# [3] Testing
+build --experimental_enable_bzlmod
+build --java_runtime_version=remotejdk_18
+
+# [4] Static analyzers
+# Required for bazel_clang_tidy to operate as expected
+build:clang-tidy --aspects @bazel_clang_tidy//clang_tidy:clang_tidy.bzl%clang_tidy_aspect
+build:clang-tidy --output_groups=report
+
+# Optionally override the .clang-tidy config file target
+build:clang-tidy --@bazel_clang_tidy//:clang_tidy_config=//:clang_tidy_config

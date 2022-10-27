@@ -5,7 +5,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"BazelBuild.vscode-bazel"
+				"BazelBuild.vscode-bazel",
+				"ms-vscode.cpptools"
 			]
 		}
 	},
