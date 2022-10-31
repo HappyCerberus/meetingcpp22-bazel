@@ -7,4 +7,8 @@ Checks: >
     performance-*,
 HeaderFilterRegex: ".*"
 
-WarningsAsErrors: "*"
+WarningsAsErrors: >
+    bugprone-*,
+    cppcoreguidelines-*,
+    google-*,
+    performance-*,
