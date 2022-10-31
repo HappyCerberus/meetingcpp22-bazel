@@ -11,6 +11,7 @@ cc_test(
     deps = [":library"],
     target_compatible_with = [
         '@platforms//os:windows',
+        '@platforms//cpu:x86_64'
     ]
 )
 
