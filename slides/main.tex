@@ -47,4 +47,75 @@
 
 \begin{document}
 
+\begin{frame}{}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Slides and follow-along}
+\begin{center}
+
+\end{center}
+\end{frame}
+
+
+% Talk about the follow-along repository.
+
+\begin{frame}{Mono vs Poly}
+\begin{center}
+\begin{Huge}
+No Politics!
+\end{Huge}
+\end{center}
+\end{frame}
+
+\begin{frame}{Mono vs Poly}
+\begin{description}
+    \item[@HEAD]{All dependencies are built from sources from the current version in the repository (e.g. the last "green" version).}
+    \item[Binary]{Dependencies are consumed as binaries, potentially not the latest version.}
+    \item[Monorepo]{All source-code and configuration for the company/product/project is in one repository.}
+    \item[Polyrepo]{Each artifact has its own repository, potentially only accessible to the team responsible.}
+\end{description}
+\end{frame}
+
+\begin{frame}{Mono vs Poly}
+\begin{center}
+\begin{Huge}
+    \begin{tabular}{c|c|c}
+                &   Monorepo    &   Polyrepo \\\hline 
+        @HEAD   & OK & ??? \\ 
+        Binary  & ??? & OK \\
+    \end{tabular}
+\end{Huge}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{}
+Bazel \pause $\Leftarrow$ Blaze \pause $\Leftarrow$ Google (The MonoRepo company)
+\end{frame}
+
+
+
+
+\begin{frame}{Hello World}
+    \begin{center}\begin{Huge}Hello World Demo\end{Huge}\end{center}
+\end{frame}
+
+\begin{frame}{Repo, Package, Target}
+\begin{center}
+\huge{\texttt{@repo//package/path:target}} \\
+\huge{\texttt{@//package/path:target}} \\
+\huge{\texttt{//package/path:target}}
+\end{center}
+\end{frame}
+
+\begin{frame}{Repo, Package, Target}
+\begin{center}
+\huge{\texttt{:target}} \\
+\huge{\texttt{//package/path}}
+\end{center}
+\end{frame}
+
+
+
 \end{document}
