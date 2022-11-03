@@ -35,7 +35,7 @@ git_repository(
        shallow_since = "1665996490 +0200"
 )
 
-# WASM
+# [7] WASM
 # Patched emsdk
 http_archive(
     name = "emsdk",
@@ -54,7 +54,7 @@ load("@emsdk//:toolchains.bzl", "register_emscripten_toolchains")
 register_emscripten_toolchains()
 
 
-# Artefacts
+# [8] Artefacts
 http_archive(
     name = "rules_pkg",
     urls = [
