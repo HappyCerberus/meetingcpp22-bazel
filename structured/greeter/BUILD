@@ -1,4 +1,10 @@
 cc_library(
+    name = "format",
+    srcs = ["format.cc"],
+    hdrs = ["format.h"],
+)
+
+cc_library(
     name = "greet",
     srcs = [
         "greet.cc",
@@ -9,10 +15,4 @@ cc_library(
         ":format"
     ],
     visibility = ["//visibility:public"],
-)
-
-cc_library(
-    name = "format",
-    srcs = ["format.cc"],
-    hdrs = ["format.h"],
 )
