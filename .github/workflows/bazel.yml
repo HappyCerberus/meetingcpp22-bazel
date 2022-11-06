@@ -1,0 +1,35 @@
+name: Bazel
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Mount bazel cache
+      uses: actions/cache@v3
+      with:
+        path: "/home/runner/.cache/bazel"
+        key: bazel-$${{ github.run_id }}
+        restore-keys: |
+          bazel
+
+    - name: Install bazelisk
+      run: |
+        curl -LO "https://github.com/bazelbuild/bazelisk/releases/download/v1.1.0/bazelisk-linux-amd64"
+        mkdir -p "${GITHUB_WORKSPACE}/bin/"
+        mv bazelisk-linux-amd64 "${GITHUB_WORKSPACE}/bin/bazel"
+        chmod +x "${GITHUB_WORKSPACE}/bin/bazel"
+
+    - name: Test
+      run: |
+        "${GITHUB_WORKSPACE}/bin/bazel" test //testing/...
+
+    - name: Test asan
+      run: |
+        "${GITHUB_WORKSPACE}/bin/bazel" build //testing/... --config asan

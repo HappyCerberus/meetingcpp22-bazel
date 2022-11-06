@@ -4,7 +4,7 @@ cc_library(
     hdrs = ["library.h"],
 )
 
-# Windows only test
+# Windows/x86_64 only test
 cc_test(
     name = "library_test",
     srcs = ["library_test.cc"],
