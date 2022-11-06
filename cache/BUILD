@@ -5,3 +5,13 @@ cc_test(
     ],
     size = "small"
 )
+
+cc_test(
+    name = "with_deps_test",
+    srcs = ["with_deps_test.cc"],
+    size = "small",
+    deps = [
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+        ]
+)
