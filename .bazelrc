@@ -9,7 +9,6 @@ build --experimental_cc_implementation_deps
 # [3] Testing
 build --experimental_enable_bzlmod
 build --java_runtime_version=remotejdk_18
-test --enable_runfiles --build_runfile_manifests
 
 # [4] Sanitizers
 build:asan --cxxopt="-Og" --cxxopt="-g" --cxxopt="-fsanitize=address" --cxxopt="-fno-omit-frame-pointer"
