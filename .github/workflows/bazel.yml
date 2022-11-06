@@ -34,8 +34,8 @@ jobs:
 
     - name: Test
       run: |
-        "${GITHUB_WORKSPACE}/bin/bazel" test //testing/...
+        "${GITHUB_WORKSPACE}/bin/bazel" test --test_output=errors //testing/...
 
     - name: Test asan
       run: |
-        "${GITHUB_WORKSPACE}/bin/bazel" build //testing/... --config asan
+        "${GITHUB_WORKSPACE}/bin/bazel" build --test_output=errors //testing/... --config asan
