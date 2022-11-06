@@ -27,3 +27,7 @@ build --incompatible_enable_cc_toolchain_resolution
 
 # [7] WASM
 build:wasm --platforms=@emsdk//:platform_wasm
+
+# [9] Remote Cache
+#build --remote_cache=http://localhost:80/cache/
+#build --remote_upload_local_results=false

@@ -20,3 +20,6 @@ RUN set -ex && \
 RUN wget https://apt.llvm.org/llvm.sh &&\
 	chmod +x llvm.sh && \
 	./llvm.sh 16 all
+
+RUN mkdir /cache && \
+    chown www-data:www-data /cache
