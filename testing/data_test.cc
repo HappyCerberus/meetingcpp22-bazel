@@ -2,11 +2,11 @@
 #include <fstream>
 #include "tools/cpp/runfiles/runfiles.h"
 
-int main() {
+int main(int, char** argv) {
     std::string error;
     using bazel::tools::cpp::runfiles::Runfiles;
     std::unique_ptr<Runfiles> runfiles(
-        Runfiles::CreateForTest(&error));
+        Runfiles::Create(argv[0], &error));
     if (runfiles == nullptr) {
         std::cerr << error << "\n";
         return 1;
