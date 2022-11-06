@@ -39,16 +39,16 @@ git_repository(
 # Patched emsdk
 http_archive(
     name = "emsdk",
-    sha256 = "19170aeef43a5b558bd609c8c1ae3c1666aeea1c69825e309eab0eb36efb1d6f",
-    strip_prefix = "emsdk-6410e91e1452d9db81166d790164af66d3a2062a/bazel",
-    url = "https://github.com/HappyCerberus/emsdk/archive/6410e91e1452d9db81166d790164af66d3a2062a.tar.gz",
+    sha256 = "9c96e51385250bb463f14a8b5b23a394fe0ab2cefba413567d4c929f6586174f",
+    strip_prefix = "emsdk-836d2ffe008f53738fd52829be4f6945b37fe265/bazel",
+    url = "https://github.com/figma/emsdk/archive/836d2ffe008f53738fd52829be4f6945b37fe265.tar.gz",
 )
 
 load("@emsdk//:deps.bzl", emsdk_deps = "deps")
 emsdk_deps()
 
 load("@emsdk//:emscripten_deps.bzl", emsdk_emscripten_deps = "emscripten_deps")
-emsdk_emscripten_deps(emscripten_version = "2.0.31")
+emsdk_emscripten_deps(emscripten_version = "3.1.8")
 
 load("@emsdk//:toolchains.bzl", "register_emscripten_toolchains")
 register_emscripten_toolchains()

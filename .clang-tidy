@@ -3,12 +3,10 @@ UseColor: true
 Checks: >
     bugprone-*,
     cppcoreguidelines-*,
-    google-*,
     performance-*,
-HeaderFilterRegex: ".*"
+HeaderFilterRegex: "^((?!/external/).)*$"
 
 WarningsAsErrors: >
     bugprone-*,
     cppcoreguidelines-*,
-    google-*,
     performance-*,

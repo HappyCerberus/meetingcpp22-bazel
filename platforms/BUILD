@@ -18,13 +18,19 @@ cc_test(
 cc_library(
     name = "platform_windows",
     srcs = [ "platform_windows.cc" ],
-    hdrs = [ "platform.h" ]
+    hdrs = [ "platform.h" ],
+    target_compatible_with = [
+        '@platforms//os:windows'
+    ]
 )
 
 cc_library(
     name = "platform_linux",
     srcs = [ "platform_linux.cc" ],
-    hdrs = [ "platform.h" ]
+    hdrs = [ "platform.h" ],
+    target_compatible_with = [
+        '@platforms//os:linux',
+    ]
 )
 
 cc_binary(
