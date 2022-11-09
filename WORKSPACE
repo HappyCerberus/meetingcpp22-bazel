@@ -36,12 +36,11 @@ git_repository(
 )
 
 # [7] WASM
-# Patched emsdk
 http_archive(
     name = "emsdk",
-    sha256 = "9c96e51385250bb463f14a8b5b23a394fe0ab2cefba413567d4c929f6586174f",
-    strip_prefix = "emsdk-836d2ffe008f53738fd52829be4f6945b37fe265/bazel",
-    url = "https://github.com/figma/emsdk/archive/836d2ffe008f53738fd52829be4f6945b37fe265.tar.gz",
+    sha256 = "1546a493149ad9b566056a1ff9d629ff3a0359fb77be8955b93e1615d5721c02",
+    strip_prefix = "emsdk-005063304bb4e575f97b7c5f50368f937c06cb54/bazel",
+    url = "https://github.com/emscripten-core/emsdk/archive/005063304bb4e575f97b7c5f50368f937c06cb54.tar.gz",
 )
 
 load("@emsdk//:deps.bzl", emsdk_deps = "deps")
