@@ -11,4 +11,4 @@ shift
 touch $OUTPUT
 truncate -s 0 $OUTPUT
 
-clang-tidy-16 --extra-arg-before=-xc++ "$@"
+clang-tidy-16 --checks=-clang-diagnostic-builtin-macro-redefined --extra-arg-before=-xc++ "$@"
